@@ -12,9 +12,6 @@ import java.util.Map;
 
 /**
  * 手机号excel解析 Listener
- *
- * @author JiChenWang
- * @since 2024/6/27 20:38
  */
 @Slf4j
 public class PhoneNumberExcelListener extends AnalysisEventListener<PhoneNumberBo> {
@@ -62,8 +59,6 @@ public class PhoneNumberExcelListener extends AnalysisEventListener<PhoneNumberB
         Boolean validateStatus = Validator.isMobile(phoneNumberBo.getPhoneNumber());
         if (validateStatus) {
             this.phoneNumberCheckBo.setSuccess(this.phoneNumberCheckBo.getSuccess() + 1);
-//            final PhoneNumberPo phoneNumberPo = PhoneNumberPo.builder().phoneNumber(phoneNumberBo.getPhoneNumber()).createTime(LocalDateTime.now()).build();
-//            this.phoneNumberCheckBo.getCheckSuccessPhoneNumberList().add(phoneNumberPo);
         } else {
             this.phoneNumberCheckBo.setError(this.phoneNumberCheckBo.getError() + 1);
             this.phoneNumberCheckBo.getCheckErrors().add(phoneNumberBo.getPhoneNumber());
@@ -80,5 +75,4 @@ public class PhoneNumberExcelListener extends AnalysisEventListener<PhoneNumberB
         this.firstReadStatus = firstReadStatus;
         this.batchSize = batchSize;
     }
-
 }

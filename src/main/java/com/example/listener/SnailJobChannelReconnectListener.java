@@ -5,11 +5,7 @@ import com.aizuda.snailjob.common.log.SnailJobLog;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-/**
- * @author xiaowoniu
- * @date 2024-03-14 21:58:18
- * @since 3.1.0
- */
+
 @Component
 public class SnailJobChannelReconnectListener implements ApplicationListener<SnailChannelReconnectEvent> {
     @Override

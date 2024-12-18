@@ -11,9 +11,6 @@ import java.util.List;
 
 /**
  * 手机号检测BO
- *
- * @author JiChenWang
- * @since 2024/6/27 20:50
  */
 @Data
 @Builder
@@ -32,8 +29,5 @@ public class PhoneNumberCheckBo {
 
     @Schema(description = "检测失败临时的数据", accessMode = Schema.AccessMode.READ_WRITE)
     private List<String> checkErrors = new ArrayList<>();
-
-//    @Schema(description = "检测成功临时的数据", accessMode = Schema.AccessMode.READ_WRITE)
-//    private List<PhoneNumberPo> checkSuccessPhoneNumberList = new ArrayList<>();
-
 }
+
