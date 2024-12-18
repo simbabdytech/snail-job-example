@@ -128,5 +128,4 @@ public class TestExcelAnalyseMapReduceJobExecutor {
         // 汇总手机号校验结果
         return PhoneNumberCheckBo.builder().total(checkTotalNum).error(checkErrorNum).success(checkSuccessNum).checkErrors(errorPhoneNumberList).build();
     }
-
 }
