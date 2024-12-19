@@ -9,17 +9,10 @@ import com.aizuda.snailjob.client.job.core.dto.MapArgs;
 import com.aizuda.snailjob.client.job.core.dto.MergeReduceArgs;
 import com.aizuda.snailjob.client.job.core.dto.ReduceArgs;
 import com.aizuda.snailjob.client.model.ExecuteResult;
-import com.aizuda.snailjob.common.core.util.JsonUtil;
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
-/**
- * @author: opensnail
- * @date : 2024-06-26
- */
 @Component
 @JobExecutor(name = "testAnnoMapReduceJobExecutor")
 public class TestAnnoMapReduceJobExecutor {

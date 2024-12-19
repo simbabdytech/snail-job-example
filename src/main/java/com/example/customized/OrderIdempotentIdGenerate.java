@@ -1,10 +1,9 @@
 package com.example.customized;
 
+import cn.hutool.crypto.SecureUtil;
 import com.aizuda.snailjob.client.core.IdempotentIdGenerate;
 import com.aizuda.snailjob.common.core.model.IdempotentIdContext;
 import com.example.vo.OrderVo;
-
-import cn.hutool.crypto.SecureUtil;
 
 
 public class OrderIdempotentIdGenerate implements IdempotentIdGenerate {
@@ -17,3 +16,4 @@ public class OrderIdempotentIdGenerate implements IdempotentIdGenerate {
     }
 
 }
+

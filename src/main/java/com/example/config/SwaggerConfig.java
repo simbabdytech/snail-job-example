@@ -10,11 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-/**
- * @author: www.byteblogs.com
- * @date : 2023-07-17 18:19
- * @since 2.1.0
- */
 @Configuration
 public class SwaggerConfig {
 
@@ -47,9 +42,3 @@ public class SwaggerConfig {
                 .build();
     }
 }
-
-
-
-
-
-

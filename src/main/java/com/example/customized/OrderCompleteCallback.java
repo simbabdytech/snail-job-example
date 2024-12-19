@@ -28,7 +28,7 @@ public class OrderCompleteCallback implements RetryCompleteCallback {
     public void doSuccessCallback(String sceneName, String executorName, Object[] objects) {
         // 重试成功后删除失败表中的数据
         OrderVo orderVo = JsonUtil.parseObject(JsonUtil.toJsonString(objects[1]), OrderVo.class);
-        log.info("远程重试成功,场景{},执行器{},参数信息", sceneName, executorName, JSONUtil.toJsonStr(objects));
+        log.info("远程重试成功,场景{},执行器{},参数信息{}", sceneName, executorName, JSONUtil.toJsonStr(objects));
         failOrderBaseMapper.delete(
                 new LambdaQueryWrapper<FailOrderPo>()
                         .eq(FailOrderPo::getOrderId, orderVo.getOrderId())
@@ -44,7 +44,7 @@ public class OrderCompleteCallback implements RetryCompleteCallback {
     @Override
     public void doMaxRetryCallback(String sceneName, String executorName, Object[] objects) {
         OrderVo orderVo = JsonUtil.parseObject(JsonUtil.toJsonString(objects[1]), OrderVo.class);
-        log.info("远程重试达到最大限度,场景{},执行器{},参数信息", sceneName, executorName, JSONUtil.toJsonStr(objects));
+        log.info("远程重试达到最大限度,场景{},执行器{},参数信息{}", sceneName, executorName, JSONUtil.toJsonStr(objects));
         // 重试失败后插入订单失败信息
         failOrderBaseMapper.insert(FailOrderPo.builder()
                 .orderId(orderVo.getOrderId())

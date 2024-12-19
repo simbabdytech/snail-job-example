@@ -44,7 +44,7 @@ snail-job:
   # 任务调度服务器信息
   server:
     # 服务器IP地址（或域名）；集群时建议通过 nginx 做负载均衡
-    host: 127.0.0.1
+    host: 10.125.60.86
     # 服务器通讯端口（不是后台管理页面服务端口）
     port: 1788
   # 命名空间
@@ -54,6 +54,6 @@ snail-job:
   # 接入组 token
   token: SJ_Wyz3dmsdbDOkDujOTSSoBjGQP1BMsVnj
   # 客户端绑定IP，必须服务器可以访问到；默认自动推断，在服务器无法调度客户端时需要手动配置
-  host: 127.0.0.1
+  host: 10.125.60.86
   # 客户端通讯端口，默认 1789
   port: 1789

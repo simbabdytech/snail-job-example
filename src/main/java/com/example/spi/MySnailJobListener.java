@@ -4,10 +4,7 @@ import com.aizuda.snailjob.client.core.event.SnailJobListener;
 import com.aizuda.snailjob.common.core.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * @author: www.byteblogs.com
- * @date : 2023-08-28 11:20
- */
+
 @Slf4j
 public class MySnailJobListener implements SnailJobListener {
 

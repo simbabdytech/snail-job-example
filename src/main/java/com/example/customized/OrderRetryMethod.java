@@ -1,12 +1,10 @@
 package com.example.customized;
 
-import org.springframework.stereotype.Component;
-
+import cn.hutool.json.JSONUtil;
 import com.aizuda.snailjob.client.core.strategy.ExecutorMethod;
 import com.example.vo.OrderVo;
-
-import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
@@ -20,3 +18,4 @@ public class OrderRetryMethod implements ExecutorMethod {
         throw new ArithmeticException("自定义的异常处理类处理");
     }
 }
+

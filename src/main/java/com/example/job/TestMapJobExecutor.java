@@ -2,7 +2,6 @@ package com.example.job;
 
 import com.aizuda.snailjob.client.job.core.MapHandler;
 import com.aizuda.snailjob.client.job.core.dto.MapArgs;
-
 import com.aizuda.snailjob.client.job.core.executor.AbstractMapExecutor;
 import com.aizuda.snailjob.client.model.ExecuteResult;
 import com.aizuda.snailjob.common.core.util.JsonUtil;
@@ -23,10 +22,6 @@ import java.util.Random;
 
 /**
  * 以下是一个统计某电商公司商家的一年的营业额的计算过程
- *
- * @author: opensnail
- * @date : 2024-06-13
- * @since : sj_1.1.0
  */
 @Component
 public class TestMapJobExecutor extends AbstractMapExecutor {

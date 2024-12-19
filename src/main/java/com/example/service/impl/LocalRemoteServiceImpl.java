@@ -12,10 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 模拟先本地再远程重试案例
- *
- * @author www.byteblogs.com
- * @date 2023-07-18 22:19:30
- * @since 2.1.0
  */
 @Service
 @RequiredArgsConstructor
@@ -89,3 +85,4 @@ public class LocalRemoteServiceImpl implements LocalRemoteService {
     }
 
 }
+

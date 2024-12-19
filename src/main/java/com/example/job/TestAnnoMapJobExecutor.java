@@ -8,10 +8,7 @@ import com.aizuda.snailjob.client.model.ExecuteResult;
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Component;
 
-/**
- * @author: opensnail
- * @date : 2024-06-26
- */
+
 @Component
 @JobExecutor(name = "testAnnoMapJobExecutor")
 public class TestAnnoMapJobExecutor {
@@ -38,3 +35,4 @@ public class TestAnnoMapJobExecutor {
     }
 
 }
+

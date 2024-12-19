@@ -23,9 +23,6 @@ import java.util.List;
 
 /**
  * 解析excel文件中的手机号码，并将错误的手机号分片入库
- *
- * @author JiChenWang
- * @since 2024/6/30 10:37
  */
 @Slf4j
 @Component
@@ -42,8 +39,6 @@ public class TestExcelAnalyseMapJobExecutor {
      * 比如文档中的手机号总量为307条，每100条一个分组，分组结果为[{0,99}, {100, 199}, {200,299}, {300, 307}]
      *
      * @return ExecuteResult
-     * @author JichenWang
-     * @since 2024/6/30 10:48
      */
     @MapExecutor
     public ExecuteResult rootMapExecute(MapArgs mapArgs, MapHandler<List<Long>> mapHandler) {
@@ -58,7 +53,7 @@ public class TestExcelAnalyseMapJobExecutor {
             // 设置区间范围
             ranges = TestMapReduceJobExecutor.doSharding(0L, phoneNumberCheckBo.getTotal(), BATCH_SIZE);
         } catch (Exception e) {
-            log.error("文件读取异常", e.getMessage());
+            log.error("文件读取异常{}", e.getMessage());
         }
         return mapHandler.doMap(ranges, "TWO_MAP");
 
@@ -67,8 +62,6 @@ public class TestExcelAnalyseMapJobExecutor {
     /**
      * @param mapArgs
      * @return ExecuteResult
-     * @author JichenWang
-     * @since 2024/6/30 11:05
      */
     @MapExecutor(taskName = "TWO_MAP")
     public ExecuteResult monthMapExecute(MapArgs mapArgs) {
@@ -83,7 +76,7 @@ public class TestExcelAnalyseMapJobExecutor {
             PhoneNumberExcelListener phoneNumberExcelListener = new PhoneNumberExcelListener(phoneNumberCheckBo, false, BATCH_SIZE);
             EasyExcel.read(numberInputStream, PhoneNumberBo.class, phoneNumberExcelListener).sheet().headRowNumber(mapResult.get(0) + 1).doReadSync();
         } catch (Exception e) {
-            log.error("文件读取异常：", e.getMessage());
+            log.error("文件读取异常：{}", e.getMessage());
         }
 
         // 如果正确手机号不为空，则入库

@@ -12,11 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * @author opensnail
- * @date 2024-07-07 12:06:57
- * @since sj_1.1.0
- */
+
 @Component
 public class TestMyMapReduceExecutor extends AbstractMapReduceExecutor {
 

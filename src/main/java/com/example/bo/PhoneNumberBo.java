@@ -5,9 +5,6 @@ import lombok.Data;
 
 /**
  * excel表格手机号BO
- *
- * @author JiChenWang
- * @since 2024/6/27 20:28
  */
 @Data
 public class PhoneNumberBo {

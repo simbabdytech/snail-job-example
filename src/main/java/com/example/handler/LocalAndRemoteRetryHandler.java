@@ -7,11 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-/**
- * @author: xiaowoniu
- * @date : 2024-02-05
- * @since : 3.1.0
- */
+
 @Component
 public class LocalAndRemoteRetryHandler {
 

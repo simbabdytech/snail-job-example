@@ -26,3 +26,4 @@ public class TestTriggerJobHandler {
         return SnailJobOpenApi.triggerWorkFlow(workFlowId).execute();
     }
 }
+

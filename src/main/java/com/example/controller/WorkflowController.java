@@ -3,16 +3,11 @@ package com.example.controller;
 import com.example.handler.TestTriggerJobHandler;
 import com.example.handler.TestUpdateJobStatusHandler;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author opensnail
- * @date 2024-10-19 10:41:25
- * @since sj_1.2.0-beta2
- */
+
 @RestController
 @RequestMapping("/open-api/workflow")
 @Tag(name = "JobOpenApi", description = "通过OpenApi可以灵活的实现对的Workflow触发和更新状态功能")

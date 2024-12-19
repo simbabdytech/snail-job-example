@@ -1,24 +1,19 @@
 package com.example.service.impl;
 
-import java.util.concurrent.TimeUnit;
-
 import cn.hutool.core.lang.Assert;
+import com.aizuda.snailjob.client.core.annotation.Retryable;
 import com.aizuda.snailjob.client.core.intercepter.RetrySiteSnapshot;
+import com.aizuda.snailjob.client.core.retryer.RetryType;
 import com.aizuda.snailjob.common.core.enums.RetryStatusEnum;
+import com.example.customized.*;
 import com.example.handler.OnlyRemoteRetryHandler;
 import com.example.service.RemoteRetryService;
+import com.example.vo.OrderVo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import com.aizuda.snailjob.client.core.annotation.Retryable;
-import com.aizuda.snailjob.client.core.retryer.RetryType;
-import com.example.customized.MultiParamIdempotentGenerate;
-import com.example.customized.OrderIdempotentIdGenerate;
-import com.example.customized.OrderCompleteCallback;
-import com.example.customized.OrderRetryMethod;
-import com.example.customized.SingleParamIdempotentGenerate;
-import com.example.vo.OrderVo;
+import java.util.concurrent.TimeUnit;
 
 /**
  * snail-job中的远程重试
@@ -163,3 +158,4 @@ public class RemoteRetryServiceImpl implements RemoteRetryService {
 
 
 }
+

@@ -1,10 +1,5 @@
 package com.example.job;
 
-/**
- * @author zhengweilin
- * @version 1.0.0
- * @date 2024/01/22
- */
 
 import com.aizuda.snailjob.client.job.core.annotation.JobExecutor;
 import com.aizuda.snailjob.client.job.core.dto.JobArgs;

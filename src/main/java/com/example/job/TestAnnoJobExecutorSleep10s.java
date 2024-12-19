@@ -6,11 +6,7 @@ import com.aizuda.snailjob.client.model.ExecuteResult;
 import com.aizuda.snailjob.common.core.util.JsonUtil;
 import org.springframework.stereotype.Component;
 
-/**
- * @author www.byteblogs.com
- * @date 2023-09-28 22:54:07
- * @since 2.4.0
- */
+
 @Component
 @JobExecutor(name = "testAnnoJobExecutorSleep10s")
 public class TestAnnoJobExecutorSleep10s {

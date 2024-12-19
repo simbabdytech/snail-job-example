@@ -13,3 +13,4 @@ public class SnailJobChannelReconnectListener implements ApplicationListener<Sna
         SnailJobLog.LOCAL.info("这个一个重连事件");
     }
 }
+

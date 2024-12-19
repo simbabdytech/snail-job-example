@@ -1,9 +1,8 @@
 package com.example.customized;
 
+import cn.hutool.crypto.SecureUtil;
 import com.aizuda.snailjob.client.core.IdempotentIdGenerate;
 import com.aizuda.snailjob.common.core.model.IdempotentIdContext;
-
-import cn.hutool.crypto.SecureUtil;
 
 public class SingleParamIdempotentGenerate implements IdempotentIdGenerate {
 
@@ -14,3 +13,4 @@ public class SingleParamIdempotentGenerate implements IdempotentIdGenerate {
         return SecureUtil.md5(params);
     }
 }
+

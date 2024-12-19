@@ -24,9 +24,6 @@ import java.util.List;
 
 /**
  * 解析校验Excel中的手机号，统计出错手机号数量，并返回错误手机号详情
- *
- * @author JichenWang
- * @since 2024/6/27 19:52
  */
 @Slf4j
 @Component
@@ -40,8 +37,6 @@ public class TestExcelAnalyseMapReduceJobExecutor {
      * 比如文档中的手机号总量为307条，每100条一个分组，分组结果为[{0,99}, {100, 199}, {200,299}, {300, 307}]
      *
      * @return ExecuteResult
-     * @author JichenWang
-     * @since 2024/6/29 14:03
      */
     @MapExecutor
     public ExecuteResult rootMapExecute(MapArgs mapArgs, MapHandler<List<Long>> mapHandler) {
@@ -56,7 +51,7 @@ public class TestExcelAnalyseMapReduceJobExecutor {
             // 设置区间范围
             ranges = TestMapReduceJobExecutor.doSharding(0L, phoneNumberCheckBo.getTotal(), BATCH_SIZE);
         } catch (Exception e) {
-            log.error("文件读取异常", e.getMessage());
+            log.error("文件读取异常: {}", e.getMessage());
         }
         return mapHandler.doMap(ranges, "TWO_MAP");
     }
@@ -65,8 +60,6 @@ public class TestExcelAnalyseMapReduceJobExecutor {
      * 处理每个分组内容，如读取{0,99}区间的手机号，并解析
      *
      * @return ExecuteResult
-     * @author JichenWang
-     * @since 2024/6/29 14:04
      */
     @MapExecutor(taskName = "TWO_MAP")
     public ExecuteResult monthMapExecute(MapArgs mapArgs) {
@@ -81,7 +74,7 @@ public class TestExcelAnalyseMapReduceJobExecutor {
             PhoneNumberExcelListener phoneNumberExcelListener = new PhoneNumberExcelListener(phoneNumberCheckBo, false, BATCH_SIZE);
             EasyExcel.read(numberInputStream, PhoneNumberBo.class, phoneNumberExcelListener).sheet().headRowNumber(mapResult.get(0) + 1).doReadSync();
         } catch (Exception e) {
-            log.error("文件读取异常：", e.getMessage());
+            log.error("文件读取异常：{}", e.getMessage());
         }
 
         return ExecuteResult.success(phoneNumberCheckBo);
@@ -110,8 +103,6 @@ public class TestExcelAnalyseMapReduceJobExecutor {
      *
      * @param phoneNumberCheckBoStr 手机号校验BO字符串
      * @return PhoneNumberCheckBo  汇总手机号校验结果BO
-     * @author JichenWang
-     * @since 2024/6/29 14:24
      */
     private PhoneNumberCheckBo buildGatherPhoneNumberCheckBo(String phoneNumberCheckBoStr) {
         final List<PhoneNumberCheckBo> phoneNumberCheckBoList = JSONArray.parseArray(phoneNumberCheckBoStr, PhoneNumberCheckBo.class);

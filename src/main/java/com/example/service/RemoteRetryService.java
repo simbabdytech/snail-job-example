@@ -2,10 +2,7 @@ package com.example.service;
 
 import com.example.vo.OrderVo;
 
-/**
- * @author: www.byteblogs.com
- * @date : 2023-09-06 09:04
- */
+
 public interface RemoteRetryService {
 
     void remoteRetry(String params);

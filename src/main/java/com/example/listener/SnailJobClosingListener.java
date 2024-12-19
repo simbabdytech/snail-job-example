@@ -13,3 +13,4 @@ public class SnailJobClosingListener implements ApplicationListener<SnailClientC
         SnailJobLog.LOCAL.info("这是一个SnailJob开始关闭事件");
     }
 }
+

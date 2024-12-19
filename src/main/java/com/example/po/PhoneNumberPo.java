@@ -10,9 +10,6 @@ import java.time.LocalDateTime;
 
 /**
  * phone_number
- *
- * @author JiChenWang
- * @since 2024/6/30 11:48
  */
 @TableName("phone_number")
 @Data

@@ -17,3 +17,4 @@ public class TestQueryJobHandler {
         return SnailJobOpenApi.getJobDetail(jobId).execute();
     }
 }
+

@@ -1,16 +1,15 @@
 package com.example.service.impl;
 
+import com.aizuda.snailjob.client.core.annotation.Retryable;
 import com.aizuda.snailjob.client.core.retryer.RetryType;
 import com.example.customized.OrderRetryMethod;
+import com.example.exception.ParamException;
 import com.example.handler.OnlyLocalRetryHandler;
 import com.example.service.LocalRetryService;
 import com.example.vo.OrderVo;
-import com.example.exception.ParamException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.aizuda.snailjob.client.core.annotation.Retryable;
 
 /**
  * snail-job中的本地重试demo
@@ -157,3 +156,4 @@ public class LocalRetryServiceImpl implements LocalRetryService {
     }
 
 }
+

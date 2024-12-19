@@ -25,10 +25,6 @@ import java.util.Random;
 
 /**
  * 以下是一个统计某电商公司商家的一年的营业额的计算过程
- *
- * @author: opensnail
- * @date : 2024-06-13
- * @since : sj_1.1.0
  */
 @Component
 public class TestMapReduceJobExecutor extends AbstractMapReduceExecutor {
@@ -56,7 +52,6 @@ public class TestMapReduceJobExecutor extends AbstractMapReduceExecutor {
         // 模拟统计营业额
         int turnover = new Random().nextInt(1000000);
         return ExecuteResult.success(turnover);
-
     }
 
     @Override

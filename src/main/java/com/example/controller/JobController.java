@@ -1,21 +1,13 @@
 package com.example.controller;
 
 import com.aizuda.snailjob.client.job.core.dto.JobResponseVO;
-import com.example.handler.TestAddJobHandler;
-import com.example.handler.TestQueryJobHandler;
-import com.example.handler.TestTriggerJobHandler;
-import com.example.handler.TestUpdateJobHandler;
-import com.example.handler.TestUpdateJobStatusHandler;
+import com.example.handler.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @author opensnail
- * @date 2024-10-19 10:41:25
- * @since sj_1.2.0-beta2
- */
+
 @RestController
 @RequestMapping("/open-api/job")
 @Tag(name = "JobOpenApi", description = "通过OpenApi可以灵活的实现对Job的增、改、查功能")

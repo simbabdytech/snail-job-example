@@ -4,10 +4,7 @@ import com.aizuda.snailjob.client.core.annotation.Retryable;
 import com.aizuda.snailjob.client.core.retryer.RetryType;
 import com.example.vo.OrderVo;
 
-/**
- * @author: www.byteblogs.com
- * @date : 2023-09-06 09:03
- */
+
 public interface LocalRetryService {
 
     void localRetry(String params);

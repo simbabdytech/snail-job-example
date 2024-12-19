@@ -8,11 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author xiaowoniu
- * @date 2024-01-03 21:09:14
- * @since 2.6.0
- */
+
 @RestController
 @RequestMapping("/workflow/callback")
 @Slf4j

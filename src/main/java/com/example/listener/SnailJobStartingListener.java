@@ -13,3 +13,4 @@ public class SnailJobStartingListener implements ApplicationListener<SnailClient
         SnailJobLog.LOCAL.info("这是一个SnailJob启动事件");
     }
 }
+

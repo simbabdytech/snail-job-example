@@ -1,10 +1,9 @@
 package com.example.executor;
 
+import cn.hutool.json.JSONUtil;
 import com.aizuda.snailjob.client.core.annotation.ExecutorMethodRegister;
 import com.aizuda.snailjob.client.core.strategy.ExecutorMethod;
 import com.example.vo.OrderVo;
-
-import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 
 @ExecutorMethodRegister(scene = ManualRetryExecutorTask.SCENE)
@@ -24,3 +23,4 @@ public class ManualRetryExecutorTask implements ExecutorMethod {
         return true;
     }
 }
+
